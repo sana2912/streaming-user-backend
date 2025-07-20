@@ -1,1 +1,6 @@
 .env
+# Ignore all uploaded files in stream folders
+user_profile/*
+
+# But keep these placeholder files so Git tracks folders
+user_profile/.gitkeep
