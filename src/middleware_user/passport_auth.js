@@ -14,6 +14,7 @@ opts.secretOrKey = process.env.SECRET;
 
 
 const auth_MIDDLEWARE = new JwtStrategy(opts, function (user_, done) {
+    console.log(user_);
     if (user_) {
         return done(null, user_);
     }

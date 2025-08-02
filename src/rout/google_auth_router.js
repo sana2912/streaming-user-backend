@@ -2,6 +2,8 @@ const express = require('express');
 const passport = require('passport');
 const google_auth = express.Router();
 const google_auth_function = require('../constroller/google_auth_controll');
+require('dotenv').config();
+const redirect_ = process.env.CLIENT_REDIRECT;
 
 // Start Google login
 google_auth.get('/login',

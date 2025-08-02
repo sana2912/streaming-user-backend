@@ -13,6 +13,8 @@ const auth_MIDDLEWARE = require('./src/middleware_user/passport_auth');
 const user_model = require('./src/model_user/user_model');
 const google_auth = require('./src/rout/google_auth_router');
 const google_strategy = require('./src/middleware_user/passport_google');
+require('dotenv').config();
+const origin_client = process.env.CLIENT_ORIGIN;
 
 connect_database();
 const app = express();

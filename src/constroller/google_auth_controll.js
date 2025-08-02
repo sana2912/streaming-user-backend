@@ -2,6 +2,9 @@ const user_model = require("../model_user/user_model");
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const secret = process.env.SECRET;
+const redirect_ = process.env.CLIENT_REDIRECT;
+
+
 module.exports.google_auth_management = async (req, res) => {
     try {
         const profile = req.user;
@@ -13,7 +16,7 @@ module.exports.google_auth_management = async (req, res) => {
                 maxAge: 5000000,
                 httpOnly: true,
                 sameSite: 'lax'
-            }).redirect('http://localhost:5173')
+            }).redirect('http://localhost:5173');
         }
         else {
             // register function
