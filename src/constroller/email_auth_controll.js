@@ -34,6 +34,7 @@ module.exports.register = async (req, res) => {
             res.cookie('jwt', token, {
                 maxAge: 5000000,
                 httpOnly: true,
+                secure: true,
                 sameSite: 'lax'
             }).status(200).json({ profile: image.secure_url })
         }

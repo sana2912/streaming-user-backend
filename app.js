@@ -20,7 +20,7 @@ connect_database();
 const app = express();
 const port = 3000;
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: origin_client,
     credentials: true,
 }));
 

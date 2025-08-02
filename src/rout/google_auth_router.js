@@ -24,7 +24,7 @@ google_auth.get('/auth',
 
 // Optional failure route
 google_auth.get('/fail', (req, res) => {
-    res.redirect('http://localhost:5173')
+    res.redirect(redirect_);
 });
 
 module.exports = google_auth;

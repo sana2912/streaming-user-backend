@@ -15,8 +15,9 @@ module.exports.google_auth_management = async (req, res) => {
             res.cookie('jwt', token, {
                 maxAge: 5000000,
                 httpOnly: true,
+                secure: true,
                 sameSite: 'lax'
-            }).redirect('http://localhost:5173');
+            }).redirect(redirect_);
         }
         else {
             // register function
@@ -32,7 +33,7 @@ module.exports.google_auth_management = async (req, res) => {
                 maxAge: 5000000,
                 httpOnly: true,
                 sameSite: 'lax'
-            }).redirect('http://localhost:5173')
+            }).redirect(redirect_)
         }
 
     } catch (error) {
