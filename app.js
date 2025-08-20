@@ -14,13 +14,25 @@ const user_model = require('./src/model_user/user_model');
 const google_auth = require('./src/rout/google_auth_router');
 const google_strategy = require('./src/middleware_user/passport_google');
 require('dotenv').config();
-const origin_client = process.env.CLIENT_ORIGIN;
+const whitelist = [
+    process.env.CLIENT_ORIGIN,
+    'https://accounts.google.com',
+    'http://localhost:5173'
+];
 
 connect_database();
 const app = express();
 const port = 3000;
+
 app.use(cors({
-    origin: origin_client,
+    origin: function (origin, callback) {
+        // allow no-origin for mobile apps or curl/postman
+        if (!origin || whitelist.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true,
 }));
 

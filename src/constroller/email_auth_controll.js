@@ -35,7 +35,8 @@ module.exports.register = async (req, res) => {
                 maxAge: 5000000,
                 httpOnly: true,
                 secure: true,
-                sameSite: 'lax'
+                sameSite: 'None',
+                path: '/'
             }).status(200).json({ profile: image.secure_url })
         }
     } catch (error) {
@@ -64,7 +65,8 @@ module.exports.login = async (req, res) => {
                 res.cookie('jwt', token, {
                     maxAge: 5000000,
                     httpOnly: true,
-                    sameSite: 'lax'
+                    sameSite: 'None',
+                    path: '/'
                 })
                     .status(200)
                     .json({

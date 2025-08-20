@@ -12,7 +12,9 @@ auth_router.get('/logout', (req, res) => {
     }
     res.clearCookie('jwt', {
         httpOnly: true,
-        sameSite: 'Lax'
+        httpOnly: true,
+        secure: true,
+        sameSite: 'None'
     });
 
     return res.status(200).json({ message: 'Logged out successfully' });

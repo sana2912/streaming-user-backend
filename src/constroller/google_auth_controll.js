@@ -16,7 +16,8 @@ module.exports.google_auth_management = async (req, res) => {
                 maxAge: 5000000,
                 httpOnly: true,
                 secure: true,
-                sameSite: 'lax'
+                sameSite: 'None',
+                path: '/'
             }).redirect(redirect_);
         }
         else {
@@ -32,7 +33,8 @@ module.exports.google_auth_management = async (req, res) => {
             res.cookie('jwt', token, {
                 maxAge: 5000000,
                 httpOnly: true,
-                sameSite: 'lax'
+                sameSite: 'None',
+                path: '/'
             }).redirect(redirect_)
         }
 
