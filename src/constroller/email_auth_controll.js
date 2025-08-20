@@ -32,7 +32,7 @@ module.exports.register = async (req, res) => {
                 if (err) { console.error("Failed to delete image:", err); }
             });
             res.cookie('jwt', token, {
-                maxAge: 5000000,
+                maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
                 httpOnly: true,
                 secure: true,
                 sameSite: 'None',
@@ -65,8 +65,10 @@ module.exports.login = async (req, res) => {
                 res.cookie('jwt', token, {
                     maxAge: 5000000,
                     httpOnly: true,
-                    sameSite: 'None',
-                    path: '/'
+                    secure: true,
+                    sameSite: "None",
+                    path: "/",
+                    maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
                 })
                     .status(200)
                     .json({

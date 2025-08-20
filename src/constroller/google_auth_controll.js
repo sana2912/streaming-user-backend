@@ -13,7 +13,7 @@ module.exports.google_auth_management = async (req, res) => {
             // login function
             const token = jwt.sign({ user_id: user._id, permission: 'user' }, secret);
             res.cookie('jwt', token, {
-                maxAge: 5000000,
+                maxAge: 1000 * 60 * 60 * 24 * 7,
                 httpOnly: true,
                 secure: true,
                 sameSite: 'None',
@@ -31,7 +31,8 @@ module.exports.google_auth_management = async (req, res) => {
             })
             const token = jwt.sign({ user_id: create._id, permission: 'user' }, secret);
             res.cookie('jwt', token, {
-                maxAge: 5000000,
+                secure: true,
+                maxAge: 1000 * 60 * 60 * 24 * 7,
                 httpOnly: true,
                 sameSite: 'None',
                 path: '/'
