@@ -1,5 +1,5 @@
 # 🎵 Streaming User Backend
-- **see this service** [streaming user backned](https://streaming-user-backend.onrender.com)  
+# **see this service** [streaming user backned](https://streaming-user-backend.onrender.com)  
 
 This project serves as the **User Service Backend** in the full streaming application.  
 It handles **authentication**, **content management** (tracks, albums, playlists), and **user interaction**, while connecting to **MongoDB Atlas** and **Cloudinary**.
@@ -113,10 +113,12 @@ flowchart TD
 - **Cloudinary** for media files  
 
 ---
-
-## 🏁 Getting Started
-
-1. Install dependencies  
+## Getting Started
+**Install dependencies**
    ```bash
    npm install
-
+   ```
+**Run the application**
+   ```bash
+   node app.js
+   ```
