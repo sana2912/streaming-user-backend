@@ -1,4 +1,5 @@
 # 🎵 Streaming User Backend
+- **see this service** [streaming user backned](https://streaming-user-backend.onrender.com)  
 
 This project serves as the **User Service Backend** in the full streaming application.  
 It handles **authentication**, **content management** (tracks, albums, playlists), and **user interaction**, while connecting to **MongoDB Atlas** and **Cloudinary**.
@@ -11,19 +12,7 @@ It handles **authentication**, **content management** (tracks, albums, playlists
 - **Backend (User side perform on render):** **this project**  
 - **Frontend (Admin side perfrom on netlify):** [stream_admin_ui](https://github.com/sana2912/stream_admin_ui.git)  
 - **Backend (Admin side perfom on render):** [stream_admin_backned](https://github.com/sana2912/stream_admin_backned.git)  
-
-**System Connections**
-
--- **UserFrontend <--> UserBackend (via REST API) 
--- **UserBackend <--> MongoDB Atlas 
--- **UserBackend <--> Cloudinary 
--- **UserFrontend <--> Cloudinary 
--- **AdminFrontend <--> AdminBackend (via REST API) 
--- **AdminBackend <--> MongoDB 
--- **Atlas AdminBackend <--> Cloudinary
--- **AdminFrontend <--> Cloudinary
-
----
+- **full systems connection picture:** [image](https://github.com/sana2912/streaming-user-backend/blob/main/system.jpg)  
 
 ## ⚙️ Stack & Tools
 - JavaScript  
