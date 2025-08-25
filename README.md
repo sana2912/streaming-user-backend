@@ -14,14 +14,14 @@ It handles **authentication**, **content management** (tracks, albums, playlists
 
 **System Connections**
 
-UserFrontend <--> UserBackend (via REST API) 
-UserBackend <--> MongoDB Atlas 
-UserBackend <--> Cloudinary 
-UserFrontend <--> Cloudinary 
-AdminFrontend <--> AdminBackend (via REST API) 
-AdminBackend <--> MongoDB 
-Atlas AdminBackend <--> Cloudinary
-AdminFrontend <--> Cloudinary
+-- **UserFrontend <--> UserBackend (via REST API) 
+-- **UserBackend <--> MongoDB Atlas 
+-- **UserBackend <--> Cloudinary 
+-- **UserFrontend <--> Cloudinary 
+-- **AdminFrontend <--> AdminBackend (via REST API) 
+-- **AdminBackend <--> MongoDB 
+-- **Atlas AdminBackend <--> Cloudinary
+-- **AdminFrontend <--> Cloudinary
 
 ---
 
@@ -36,47 +36,65 @@ AdminFrontend <--> Cloudinary
 ---
 
 ## 📂 Project Layout
-── .env
-├── .gitignore
-├── app.js                 # Entry point
-├── package.json
-├── package-lock.json
-├── node_modules/
-└── src/
-    ├── config_user/        # Database & Cloudinary settings
-    │   ├── data_base.js
-    │   └── cloudinary_.js
-    │
-    ├── controller/         # Handle req/res with MongoDB & Cloudinary
-    │   ├── track_controll.js
-    │   ├── album_controller.js
-    │   ├── playlist_controll.js
-    │   ├── search_controll.js
-    │   ├── email_auth_controll.js
-    │   ├── google_auth_controll.js
-    │   └── like_controll.js
-    │
-    ├── middleware_user/    # Auth, protected routes, file tracking
-    │   ├── multer_.js
-    │   ├── passport_auth.js
-    │   └── passport_google.js
-    │
-    ├── model_user/         # Mongoose schemas
-    │   ├── user_model.js
-    │   ├── track_model.js
-    │   ├── album_model.js
-    │   └── playlist_model.js
-    │
-    ├── rout/               # Routes
-    │   ├── auth_router.js
-    │   ├── google_auth_router.js
-    │   ├── album_router.js
-    │   ├── playlist_router.js
-    │   ├── track_router.js
-    │   ├── like_router.js
-    │   └── search_router.js
-    │
-    └── user_profile/       # File storage for Multer uploads
+flowchart TD
+
+    A[Root] --> B[.env]
+    A --> C[.gitignore]
+    A --> D[app.js]
+    A --> E[package.json]
+    A --> F[package-lock.json]
+    A --> G[node_modules/]
+    A --> H[src/]
+
+    subgraph H[src/]
+        H1[config_user/]
+        H2[controller/]
+        H3[middleware_user/]
+        H4[model_user/]
+        H5[rout/]
+        H6[user_profile/]
+    end
+
+    subgraph H1[config_user/]
+        H1a[data_base.js]
+        H1b[cloudinary_.js]
+    end
+
+    subgraph H2[controller/]
+        H2a[track_controll.js]
+        H2b[album_controller.js]
+        H2c[playlist_controll.js]
+        H2d[search_controll.js]
+        H2e[email_auth_controll.js]
+        H2f[google_auth_controll.js]
+        H2g[like_controll.js]
+    end
+
+    subgraph H3[middleware_user/]
+        H3a[multer_.js]
+        H3b[passport_auth.js]
+        H3c[passport_google.js]
+    end
+
+    subgraph H4[model_user/]
+        H4a[user_model.js]
+        H4b[track_model.js]
+        H4c[album_model.js]
+        H4d[playlist_model.js]
+    end
+
+    subgraph H5[rout/]
+        H5a[auth_router.js]
+        H5b[google_auth_router.js]
+        H5c[album_router.js]
+        H5d[playlist_router.js]
+        H5e[track_router.js]
+        H5f[like_router.js]
+        H5g[search_router.js]
+    end
+
+    H6[user_profile/]
+
 
 ---
 
