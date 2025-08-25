@@ -12,7 +12,7 @@ It handles **authentication**, **content management** (tracks, albums, playlists
 - **Backend (User side perform on render):** **this project**  
 - **Frontend (Admin side perfrom on netlify):** [stream_admin_ui](https://github.com/sana2912/stream_admin_ui.git)  
 - **Backend (Admin side perfom on render):** [stream_admin_backned](https://github.com/sana2912/stream_admin_backned.git)  
-- **full systems connection picture:** [image](https://github.com/sana2912/streaming-user-backend/blob/main/system.jpg)  
+- **for more understanding see full systems picture:** [image](https://res.cloudinary.com/ddlspu2uq/image/upload/v1756123510/system_d4p3cd.jpg)  
 
 ## ⚙️ Stack & Tools
 - JavaScript  
