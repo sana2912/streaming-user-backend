@@ -121,7 +121,7 @@ app.get('/', async (req, res) => {
   <h1>🎵 Streaming Backend Service</h1>
   <p>Your backend is running smoothly 🚀</p>
   <div class="button-container">
-    <a href="${process.env.CLIENT_ORIGIN}" class="button" target="_blank">
+    <a href=`${process.env.CLIENT_ORIGIN}` class="button" target="_blank">
       Go to Frontend
     </a>
     <a href="https://github.com/sana2912/streaming-user-backend.git" class="button" target="_blank">
