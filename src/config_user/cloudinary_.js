@@ -13,7 +13,6 @@ async function cloudinary_upload_file(file, file_name, resource_, dir) {
         folder: dir,
         transformation: [
             { aspect_ratio: "1.0", width: 400, crop: "fill" },
-            { radius: "max" },
             { fetch_format: "auto" }
         ],
     });
