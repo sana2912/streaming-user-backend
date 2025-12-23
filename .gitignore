@@ -1,4 +1,5 @@
 .env
+.env.keys
 # Ignore all uploaded files in stream folders
 user_profile/*
 

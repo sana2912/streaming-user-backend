@@ -1,0 +1,38 @@
+ตัวอย่างคำสั่งใน linux แบบง่ายๆ (everthing is case sensitive)
+1 date วันที่
+2 pwd แสดง path ที่อยู่ปัจจุบัน
+3 ls แสดงไฟล์ใน path ปัจจุบัน
+4 cd เปลี่ยน path
+5 man ดู manual เช่น man ls ดู manual ของคำสั่ง ls
+6 mkdir สร้าง directory
+7 touch สร้างไฟล์
+8 rm ลบไฟล์
+9 rmdir ลบ directory
+10 nano แก้ไขไฟล์
+11 cat ดูไฟล์
+12 cp คัดลอกไฟล์
+13 mv ย้ายไฟล์
+14 ls -l ดูไฟล์ใน directory
+15 ls -la ดูไฟล์ใน directory รวมถึง hidden file
+16 ls -lh ดูไฟล์ใน directory รวมถึง hidden file และ size
+17 ls -la ดูไฟล์ใน directory รวมถึง hidden file และ size
+18 rm rf ลบ directory รวมถึงไฟล์ใน directory
+19 chown เปลี่ยน owner
+20 chmod เปลี่ยน permission
+21 sudo เข้าสู่ root
+| โฟลเดอร์   | หน้าที่หลัก            | ใช้ตอนไหน / ตัวอย่าง                  |
+| ---------- | ---------------------- | ------------------------------------- |
+| `/`        | จุดเริ่มต้นของทุกอย่าง | แม่ของทุกโฟลเดอร์ทั้งหมด              |
+| `/home`    | บ้านของ user           | เก็บงาน, git repo, `.ssh`, `.bashrc`  |
+| `/root`    | บ้านของ root           | ใช้เฉพาะ admin                        |
+| `/etc`     | config ทั้งระบบ        | `sshd_config`, `nginx.conf`, `passwd` |
+| `/var`     | ข้อมูลที่เปลี่ยนตลอด   | log, database, docker data            |
+| `/var/log` | log ระบบ               | debug ปัญหา server                    |
+| `/usr`     | โปรแกรมที่ติดตั้ง      | `git`, `node`, `python`               |
+| `/bin`     | คำสั่งพื้นฐาน          | `ls`, `cp`, `mv`                      |
+| `/sbin`    | คำสั่ง admin           | `reboot`, `iptables`                  |
+| `/tmp`     | ไฟล์ชั่วคราว           | test, unzip, build                    |
+| `/opt`     | app ที่ติดตั้งเอง      | service / app นอกระบบ                 |
+| `/dev`     | อุปกรณ์                | disk, usb, network                    |
+| `/proc`    | ข้อมูลระบบสด           | process, memory                       |
+| `/sys`     | info kernel            | hardware, system                      |
