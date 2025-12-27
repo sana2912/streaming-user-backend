@@ -1,6 +1,5 @@
 const user_model = require("../model_user/user_model");
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 const secret = process.env.SECRET;
 const redirect_ = process.env.CLIENT_REDIRECT;
 

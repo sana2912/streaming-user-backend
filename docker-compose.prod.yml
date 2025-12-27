@@ -1,0 +1,14 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - DOTENV_PRIVATE_KEY=${DOTENV_PRIVATE_KEY}
+    volumes:
+      - user_profile:/app/user_profile
+
+volumes:
+  user_profile:

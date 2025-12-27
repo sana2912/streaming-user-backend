@@ -1,4 +1,3 @@
-require('dotenv').config();
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const google_strategy = new GoogleStrategy({

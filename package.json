@@ -1,16 +1,28 @@
 {
   "name": "streaming-user-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests yet\"",
+    "env:dev:encrypt": "dotenvx encrypt -f .env.development",
+    "env:dev:decrypt:danger": "dotenvx decrypt -f .env.development",
+    "env:prod:encrypt": "dotenvx encrypt -f .env.production",
+    "env:prod:decrypt:danger": "dotenvx decrypt -f .env.production",
+    "build:dev:once": "cross-env NODE_ENV=development node build.js --once",
+    "build:dev:watch": "cross-env NODE_ENV=development node build.js",
+    "start:dev": "npm run build:dev:once && dotenvx run -f .env.development -- nodemon dist/app.js",
+    "build:prod": "dotenvx run -f .env.production -- cross-env NODE_ENV=production node build.js",
+    "start:prod": "npm run build:prod && dotenvx run -f .env.production -- node dist/app.js",
+    "start": "npm run start:prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "bcrypt": "^6.0.0",
+    "@dotenvx/dotenvx": "^1.51.2",
+    "@scalar/express-api-reference": "^0.8.30",
+    "bcryptjs": "^3.0.3",
     "cloudinary": "^2.7.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -22,6 +34,12 @@
     "multer": "^2.0.1",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
-    "passport-jwt": "^4.0.1"
+    "passport-jwt": "^4.0.1",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "esbuild": "^0.27.2",
+    "nodemon": "^3.1.11"
   }
 }

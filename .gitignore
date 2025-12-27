@@ -1,6 +1,16 @@
 .env
+.env.keys
 # Ignore all uploaded files in stream folders
 user_profile/*
+
+# Ignore all uploaded files in stream folders
+stream/*
+
+# Ignore all uploaded files in dist folders
+dist
+note/
+node_modules
+Dockerfile.ver1
 
 # But keep these placeholder files so Git tracks folders
 !user_profile/.gitkeep
