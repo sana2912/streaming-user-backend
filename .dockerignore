@@ -14,4 +14,5 @@ coverage
 *.env
 .env.*
 !*.env.example
+!*.env.production
 user_profile

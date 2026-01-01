@@ -1,5 +1,3 @@
-
-
 ############################
 # BUILD STAGE
 ############################
@@ -26,9 +24,9 @@ RUN echo "Installing npm dependencies..." && \
 
 # copy source code และไฟล์ที่ใช้ตอน build
 COPY src ./src
-COPY build.js api-docs.json ./
+COPY build.js api-docs.json .env.production ./
 RUN echo "Building application (production mode)..." && \
-    npm run build:pro
+    npm run build:prod
 
 # ลบ devDependencies ออก เหลือเฉพาะที่ runtime ใช้จริง
 RUN echo "Pruning dev dependencies..." && \
